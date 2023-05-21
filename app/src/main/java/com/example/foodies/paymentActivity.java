@@ -30,7 +30,7 @@ public class paymentActivity extends AppCompatActivity {
     LinearLayout card_detail_layout;
     private static final String CHANNEL_ID = "my_channel";
 
-    String paymentType = "null";
+    String paymentType = "no";
     String name, address, contact, cvc, holderName, cardNumber, day, month, year;
 
     @Override
@@ -122,7 +122,7 @@ public class paymentActivity extends AppCompatActivity {
             return;
         }
 
-        if(paymentType==null){
+        if(paymentType=="no"){
             Toast.makeText(this, "Please select Payment method", Toast.LENGTH_SHORT).show();
             return;
         }

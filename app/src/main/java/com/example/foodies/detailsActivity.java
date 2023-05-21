@@ -102,7 +102,7 @@ public class detailsActivity extends AppCompatActivity {
                 boolean isInsertedHistory =  DB.insertDataHistory(tmp_email, tmp_name, tmp_price, quantity, String.valueOf(tmp_total_Price));
 
                 if (isInsertedCart && isInsertedHistory) {
-                    Toast.makeText(detailsActivity.this, "Item added to cart and history", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(detailsActivity.this, "Item added to cart", Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(detailsActivity.this, "Failed", Toast.LENGTH_SHORT).show();
                 }

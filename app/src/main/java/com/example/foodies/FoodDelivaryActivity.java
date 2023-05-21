@@ -23,12 +23,7 @@ public class FoodDelivaryActivity extends AppCompatActivity {
 
         RecyclerView recyclerView=findViewById(R.id.recyclerview);
 
-        ArrayList<MainModel> list =new ArrayList<>();
-        list.add(new MainModel(R.drawable.tower,"Tower Burger","350 ","Tower Burger Cooked with Fresh Meat and cheese"));
-        list.add(new MainModel(R.drawable.pizza,"Pizza","1000 ","Tower Burger Cooked with Fresh Meat and cheese"));
-        list.add(new MainModel(R.drawable.fries,"Potato Fries","200 ","Tower Burger Cooked with Fresh Meat and cheese"));
-        list.add(new MainModel(R.drawable.frieds,"Chicken Fried's","900 ","Tower Burger Cooked with Fresh Meat and cheese"));
-        list.add(new MainModel(R.drawable.drinks,"Soft Drink","150 ","Tower Burger Cooked with Fresh Meat and cheese"));
+        ArrayList<MainModel> list = FoodItemsList.getFoodItems();
 
         MainAdapter adapter=new MainAdapter(list,this);
         recyclerView.setAdapter(adapter);
