@@ -30,7 +30,7 @@ public class paymentActivity extends AppCompatActivity {
     LinearLayout card_detail_layout;
     private static final String CHANNEL_ID = "my_channel";
 
-    String paymentType = "";
+    String paymentType = "null";
     String name, address, contact, cvc, holderName, cardNumber, day, month, year;
 
     @Override
@@ -119,6 +119,11 @@ public class paymentActivity extends AppCompatActivity {
         if (name.isEmpty() || contact.isEmpty() || address.isEmpty()) {
             // Display an error message if any field is empty
             Toast.makeText(paymentActivity.this, "Please fill in all the fields.", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        if(paymentType==null){
+            Toast.makeText(this, "Please select Payment method", Toast.LENGTH_SHORT).show();
             return;
         }
 

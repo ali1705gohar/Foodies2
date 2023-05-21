@@ -17,6 +17,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.foodies.Adapters.CartAdapter;
 
+import java.text.DecimalFormat;
+
 public class cartActivity extends AppCompatActivity {
 
     Double service_charges = 5.68, delivary_charges = 40.0, discount = 10.0, final_price;
@@ -69,7 +71,10 @@ public class cartActivity extends AppCompatActivity {
         double finaldiscountPrice = price - discountAmount; // Calculate the final price
 
         final_price = finaldiscountPrice;
-        txt_final_price.setText("RS " + String.valueOf(final_price));
+        DecimalFormat decimalFormat = new DecimalFormat("0.00");
+        String formattedFinalPrice = decimalFormat.format(final_price);
+        txt_final_price.setText("RS " + formattedFinalPrice);
+
 
 
         btn_clear_cart.setOnClickListener(new View.OnClickListener() {
