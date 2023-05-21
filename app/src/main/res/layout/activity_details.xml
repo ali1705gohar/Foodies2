@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".detailsActivity">
+
+    <ImageView
+        android:layout_marginTop="20dp"
+        android:id="@+id/prod_image"
+        android:layout_width="match_parent"
+        android:layout_height="210dp"
+        android:src="@drawable/frieds"
+
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+
+                    android:id="@+id/txt_details_prod_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/calibrib"
+                    android:text="Product Name"
+                    android:textColor="@color/my_theme_pink"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/prod_discription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/alibri"
+                    android:text="Product discription"
+                    android:textSize="20sp"
+
+                    />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/btn_remove_item"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/baseline_remove_circle_24" />
+
+
+                    <TextView
+                        android:id="@+id/txt_quantity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="00"
+                        android:textColor="@color/black"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+                    <ImageView
+                        android:id="@+id/btn_add_item"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/baseline_add_circle_24" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="40dp"
+
+                        android:fontFamily="@font/alibri"
+                        android:text="RS  "
+                        android:textColor="#B04759"
+                        android:textSize="25sp" />
+                    <TextView
+                        android:id="@+id/prod_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="40dp"
+                        android:textColor="#B04759"
+                        android:fontFamily="@font/alibri"
+                        android:text="000"
+                        android:textSize="25sp" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+
+                        android:fontFamily="@font/alibri"
+                        android:text="Total Price "
+                        android:textColor="#B04759"
+                        android:textSize="25sp" />
+                    <TextView
+                        android:id="@+id/prod_total_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:textColor="#B04759"
+                        android:fontFamily="@font/alibri"
+                        android:text="000"
+                        android:textSize="25sp" />
+
+                </LinearLayout>
+
+
+                <Button
+                    android:id="@+id/btn_addto_cart"
+                    android:layout_width="150dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="50dp"
+                    android:background="@drawable/btn_curve_white"
+                    android:backgroundTint="@color/my_theme_pink"
+                    android:text="Add to Cart"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/my_theme_lightgray2"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".Rate_us">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/alibri"
+        android:text="Customer Review: We Value Your Feedback!"
+        android:textSize="20dp"
+
+        />
+
+    <EditText
+        android:id="@+id/editTextTextMultiLine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/txt_back2"
+        android:elevation="4dp"
+        android:ems="10"
+        android:paddingLeft="10dp"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:minHeight="90dp" />
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:elevation="6dp"
+        android:layout_gravity="center_horizontal"
+        android:isIndicator="false"
+        android:numStars="5"
+        android:progressTint="@color/my_theme_pink"
+        android:theme="@style/Theme.Material3.Light" />
+
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="140dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/btn_curve_white"
+        android:text="Submit"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/my_theme_pink"
+
+        />
+</LinearLayout>

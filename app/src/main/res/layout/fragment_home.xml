@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeFragment"
+    android:background="@color/my_theme_lightgray2"
+    >
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/my_theme_lightgray2"
+        android:padding="20dp"
+
+        >
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_food_delivary"
+        android:layout_width="160dp"
+        android:layout_height="250dp"
+        android:layout_alignParentTop="true"
+        app:cardCornerRadius="10dp"
+
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/card_delivary_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/calibrib"
+                android:text="Food Delivary"
+                android:textColor="@color/my_theme_pink"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/card_selivary_disc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/card_delivary_title"
+                android:fontFamily="@font/alibri"
+                android:text="Order your favourite food..."
+                android:textColor="@color/black" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="5dp"
+                app:srcCompat="@drawable/delivary" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_food_pickup"
+        android:layout_width="160dp"
+        android:layout_height="115dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toEndOf="@id/card_food_delivary"
+        app:cardCornerRadius="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/card_pickup_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/calibrib"
+                android:text="Pick up"
+                android:textColor="@color/my_theme_pink"
+                android:textSize="20sp" />
+
+
+            <ImageView
+                android:id="@+id/img_pickup"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_toEndOf="@id/card_pickup_title"
+                app:srcCompat="@drawable/grocery" />
+
+            <TextView
+                android:id="@+id/card_pick_disc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/card_pickup_title"
+                android:layout_toStartOf="@id/img_pickup"
+                android:fontFamily="@font/alibri"
+                android:text="Save RS 30%"
+                android:textColor="@color/black" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_food_dinein"
+        android:layout_width="160dp"
+        android:layout_height="124dp"
+        android:layout_below="@id/card_food_pickup"
+        android:layout_alignParentEnd="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@id/card_food_delivary"
+        app:cardCornerRadius="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/card_dinein_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/calibrib"
+                android:text="Dine_in"
+                android:textColor="@color/my_theme_pink"
+                android:textSize="20sp" />
+
+
+            <ImageView
+                android:id="@+id/img_eat"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_toEndOf="@id/card_dinein_title"
+                app:srcCompat="@drawable/eat" />
+
+            <TextView
+                android:id="@+id/card_dinein_disc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/card_dinein_title"
+                android:layout_toStartOf="@id/img_eat"
+                android:fontFamily="@font/alibri"
+                android:text="Eat out and save RS 30%"
+                android:textColor="@color/black" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/card_food_delivary"
+        android:layout_marginTop="20dp"
+
+        >
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardCornerRadius="10dp">
+
+            <LinearLayout
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Your Daily Deals..."
+                    android:textSize="25sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/calibrib"
+                    android:layout_marginBottom="20dp"
+
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/bannar_outline"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="20dp"
+                    android:paddingRight="20dp"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Want 10 Free Deliveries..."
+                        android:textColor="@color/black"
+                        android:textSize="22sp"
+                        android:fontFamily="@font/calibrib"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Joins Foodies Subscription Now"
+                        android:textColor="@color/my_theme_pink"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/alibri"
+                        />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/bannar_outline"
+                    android:layout_marginTop="20dp"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="20dp"
+                    android:paddingRight="20dp"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Try Panda Rewarrds!"
+                        android:textColor="@color/black"
+                        android:textSize="22sp"
+                        android:fontFamily="@font/calibrib"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Order food Earn points and win Prizes"
+                        android:textColor="@color/my_theme_pink"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/alibri"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/rate_us"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/bannar_outline"
+                    android:layout_marginTop="20dp"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="20dp"
+                    android:paddingRight="20dp"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rate Us!"
+                        android:textColor="@color/black"
+                        android:textSize="22sp"
+                        android:fontFamily="@font/calibrib"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rate us and get a Chance to Win amazing Rewards and Discounts."
+                        android:textColor="@color/my_theme_pink"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/alibri"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btn_previous_orders"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/bannar_outline"
+                    android:layout_marginTop="20dp"
+                    android:backgroundTint="@color/my_theme_pink"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="20dp"
+                    android:paddingRight="20dp"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Previous Orders"
+                        android:textColor="@color/white"
+                        android:textSize="22sp"
+                        android:fontFamily="@font/calibrib"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Watch your Order History"
+                        android:textColor="@color/my_theme_white"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/alibri"
+                        />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+    </RelativeLayout>
+</ScrollView>
+

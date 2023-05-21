@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/my_theme_lightgray2"
+    tools:context=".paymentActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/my_theme_pink"
+            android:fontFamily="@font/calibrib"
+            android:textSize="30dp"
+            android:text="Confirm Order" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Name"
+
+
+                />
+
+            <EditText
+                android:id="@+id/txt_payment_name"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/btn_curve_white"
+                android:elevation="2dp"
+                android:paddingLeft="10dp"
+                android:inputType="textPersonName"
+                 />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Contact number"
+
+
+                />
+
+            <EditText
+                android:id="@+id/txt_payment_contact"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/btn_curve_white"
+                android:elevation="2dp"
+                android:paddingLeft="10dp"
+                android:inputType="number"
+                 />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Delivary Address"
+
+
+                />
+
+            <EditText
+                android:id="@+id/txt_payment_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/btn_curve_white"
+                android:elevation="2dp"
+                android:inputType="textImeMultiLine"
+                android:minHeight="50dp"
+                android:paddingLeft="10dp"
+                 />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/calibrib"
+                    android:text="Payment Details"
+                    android:textColor="@color/my_theme_pink"
+                    android:textSize="20dp" />
+
+                <RadioGroup
+                    android:id="@+id/radio_group_payment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/btn_curve_white"
+
+                    android:padding="10dp">
+
+                    <RadioButton
+                        android:id="@+id/radio_cash_on_delivery"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cash on Delivery (Collect your order and then pay)" />
+
+                    <RadioButton
+                        android:id="@+id/radio_online_payment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Online Payment (Credit/Debit Card)" />
+
+
+                </RadioGroup>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_card_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:padding="10dp">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/calibrib"
+                    android:text="Card Details"
+                    android:textColor="@color/my_theme_pink"
+                    android:textSize="20sp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Card Number"
+                    />
+
+
+                <EditText
+                    android:id="@+id/txt_payment_cardnumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/btn_curve_white"
+                    android:elevation="2dp"
+                    android:minHeight="50dp"
+                    android:inputType="number"
+                    android:paddingLeft="10dp"
+                    android:hint="Card Number" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Valid till.."
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    >
+
+                    <EditText
+                        android:id="@+id/txt_payment_day"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/btn_curve_white"
+                        android:elevation="2dp"
+                        android:hint="Date"
+                        android:inputType="date"
+                        android:minHeight="40dp"
+                        android:paddingLeft="10dp" />
+
+                    <EditText
+                        android:id="@+id/txt_payment_month"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/btn_curve_white"
+                        android:elevation="2dp"
+                        android:hint="month"
+                        android:inputType="date"
+                        android:minHeight="40dp"
+                        android:paddingLeft="10dp" />
+
+                    <EditText
+                        android:id="@+id/txt_payment_year"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/btn_curve_white"
+                        android:elevation="2dp"
+                        android:hint="year"
+                        android:inputType="date"
+                        android:minHeight="40dp"
+                        android:paddingLeft="10dp" />
+
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Card CVC"
+
+                    />
+
+                <EditText
+                    android:id="@+id/txt_payment_CVC"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/btn_curve_white"
+                    android:elevation="2dp"
+                    android:minHeight="50dp"
+                    android:paddingLeft="10dp"
+                    android:inputType="numberPassword"
+                    android:hint="3 digit CVC number" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Name on Card"
+
+                    />
+
+                <EditText
+                    android:id="@+id/txt_payment_holder_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/btn_curve_white"
+                    android:elevation="2dp"
+                    android:inputType="textPersonName"
+                    android:minHeight="50dp"
+                    android:paddingLeft="10dp"
+                    android:hint="Name on Card" />
+
+                <Switch
+                    android:id="@+id/switch_save"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Save Card Details"
+                    android:layout_marginTop="10dp"
+
+                    />
+
+
+            </LinearLayout>
+            <Button
+
+                android:id="@+id/btn_confrim_order"
+                android:layout_width="130dp"
+                android:layout_height="50dp"
+                android:background="@drawable/btn_curve_white"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="5dp"
+                android:backgroundTint="@color/my_theme_pink"
+                android:text="Confrim Order"
+                android:textColor="@color/white"
+                />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
