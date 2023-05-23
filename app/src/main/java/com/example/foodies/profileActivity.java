@@ -15,7 +15,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.foodies.R;
+
 
 public class profileActivity extends AppCompatActivity {
 
@@ -149,6 +149,7 @@ public class profileActivity extends AppCompatActivity {
 
                 Intent intent=new Intent(getApplicationContext(),dashboard.class);
                 startActivity(intent);
+                finish();
             }
         });
     }
